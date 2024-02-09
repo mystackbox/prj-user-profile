@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    margin: 0px auto;
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: grey;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid lightgrey;   
+}
+
+/* Forms */
+
+.form-control {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: grey;
+}
+
+.form-control::placeholder {
+    color: lightgrey;
+}
+
+.form-control.ng-touched.ng-invalid {
+    border-left: 14px solid #42A948;
+    opacity: 1;
+}
+
+.form-control:focus {
+    border: 1px solid blue;
+}
+
+.form-validation-message {
+    color: red;
+    font-size: 14px;
+}
+
+/* HyperLinks */
+.navbar-brand, .nav-link  {
+    color: grey;
+}
+
+.navbar-brand:hover {
+    color: orangered;
+}
+
+.nav-link:hover {
+    color: orangered;
+}
