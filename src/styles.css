@@ -7,24 +7,30 @@ html, body {
 body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
     color: grey;
+    text-align: center;
+
+    background-image: url('^assets/wp/1.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .container {
     margin: auto; 
-    max-width: 400px;
-    /* border: 1px solid lightgrey;      */
+    max-width: 900px;
 }
 
 .page-content-container {
-    margin: 10px 0 15px 0;
-    padding: 15px 0px 15px 0px;
+    margin: 0px 0 15px 0;
+    padding: 15px 0px 50px 0px;
     border-radius: 15px;
+    background-color: rgba(248, 249, 250, 0.8);
 }
 
 /* page content sections */
 .page-content-selection {
-    text-align: center;
+    
     margin: 5px 0px 5px 0px;
+    
 }
 
 /* Profile image */
@@ -34,17 +40,18 @@ body {
 }
 
 form {
-    margin: 20px;
+    margin: 60px 20px 60px 20px ;
     margin: auto;
-    max-width: 300px;
+    max-width: 280px;
     padding: 15px;
     border-radius: 6px;
-    border: 1px solid lightgrey;    
+    background-color: rgba(248, 249, 250, 1);
  }
 
-.form-sections-headings {
-    color: lightgrey;
+.form-heading-section {
+    color: grey;
     margin-bottom: 12px;
+    font-weight: bolder;
 }
 
 /* Form common styles*/
@@ -65,7 +72,6 @@ form.form-control.ng-touched.ng-invalid {
 }
 
 .form-control:focus {
-    border: 1px solid blue;
     color: lightgrey;
 }
 
@@ -76,6 +82,12 @@ form.form-control.ng-touched.ng-invalid {
     position: relative;
     z-index: 2;
     color: lightgrey;
+}
+
+form .form-validation-error-message {
+    color: red;
+    font-size: 11px;
+    text-align: left;
 }
 
 form .submit-button {
@@ -92,25 +104,36 @@ form .submit-button:hover {
     color: white;
 }
 
-form .form-nav-link {
-    font-size: 12px;
+form .form-clear-btn {
+    font-size: 13px;
     border: 1px solid lightgrey;
     width: 100%;
     padding: 4px 0px 4px 0px;
-    margin-top: 10px;
+    margin-top: 8px;
     color: lightgrey;
     border-radius: 3px;
 }
 
-form .form-nav-link:hover {
+form .form-clear-btn:hover {
     border: 1px solid red;
     background-color: red;
     color: white;
 }
 
-.form-validation-message {
-    color: red;
-    font-size: 14px;
+.alternative-url-container {
+    margin: 10px 0px 10px 0px;
+    color: grey;
+}
+
+.alternative-url {
+    color: orangered;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 0px 5px 0px 5px;
+}
+
+.alternative-url:hover {
+    color: orangered;
 }
 
 .form-error-messages {
@@ -123,6 +146,10 @@ form .form-nav-link:hover {
     border: 1px solid red;
 }
 
+.chart-container {
+    margin: 10px 0px 0px 0px;
+    height: 20px;
+}
 
 
 

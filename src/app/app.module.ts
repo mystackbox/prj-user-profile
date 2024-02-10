@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+//for reactive forms
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,7 @@ import { RegistrationComponent } from './account/registration/registration.compo
 import { UserProfileComponent } from './account/user-profile/user-profile.component';
 import { LoginComponent } from './account/login/login.component';
 import { HeaderComponent } from './layout/header/header/header.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +21,11 @@ import { HeaderComponent } from './layout/header/header/header.component';
     RegistrationComponent,
     UserProfileComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    DashboardComponent
   ],
   imports: [
+     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule
   ],

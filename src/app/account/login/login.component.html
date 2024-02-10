@@ -1,34 +1,46 @@
-<section class="page-content-container bg-light">
+<section class="page-content-container">
 <app-header></app-header>
 
-    <div class="page-content-selection">
+    <div class="page-content-selection ">
         <!-- Login form section-->
-        <form>
-            <div class="form-sections-headings">
-                Sign-In
+        <form [formGroup]="loginForm" >
+            <div class="form-heading-section">
+                Sign In
             </div>
-            <div class="form-first-column">
 
                 <div class="form-group">
-                    <!-- #username allows angular to bind form-controls change status to ngModel -->
-                    <input type="text" formControlName="username"
-                        class="form-control form-control-sm form-control-textbox" placeholder="Email address">    
+                    <input type="text" formControlName="emailAddress"
+                        class="form-control form-control-sm form-control-textbox" 
+                        placeholder="Email address">   
+
+                    <!--Multiple Validation Error messages -->
+                    <div *ngIf="emailAddress?.touched && emailAddress?.invalid" class="form-validation-error-message">
+                        <div *ngIf="emailAddress?.errors?.['required']">* Email address
+                            required </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <!-- #password allows angular to binda the form-control to ngModel -->
                     <input type="password" formControlName="password" class="form-control form-control-sm"
                         placeholder="Password">
+                    
+                    <!--Multiple Validation Error messages -->
+                    <div *ngIf="password?.touched && password?.invalid" class="form-validation-error-message">
+                        <div *ngIf="password?.errors?.['required']">* Password
+                            required 
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <!-- keeps the button inactive untill when the for is valid -->
-                    <input type="submit" value="Submit" class="btn btn-sm submit-button">
-                    <a class="nav-link form-nav-link" [routerLinkActive]="['active']" routerLink="/account/registration">Register</a>
-                    <a class="nav-link form-nav-link" [routerLinkActive]="['active']" routerLink="/">Home</a>
-
+                    <input type="submit" value="Submit" class="btn btn-sm submit-button">     
+                    <input type="reset" value="Clear" class="btn btn-sm form-clear-btn">
                 </div>
-            </div>
-        </form>
+
+                <div class="alternative-url-container">               
+                    <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/account/registration">Register</a> |
+                    <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/">Home</a>
+                </div>
+        </form> 
     </div>
 </section>

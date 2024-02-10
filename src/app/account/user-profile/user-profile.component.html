@@ -1,1 +1,25 @@
-<p>user-profile works!</p>
+<section class="page-content-container">
+    <app-header></app-header>
+
+    <div class="page-content-selection">
+        <!-- Login form section-->
+        <form >
+            <div class="form-heading-section">
+                Profile Details
+            </div>
+
+               <div>
+                ( Yingisani )
+            </div>
+
+            <div>
+               yingishirinda@gmail.com
+            </div>
+
+            <div class="alternative-url-container">
+                <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/dashboard">Dashboard</a> |
+                <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/">Signout</a>
+            </div>
+        </form>
+    </div>
+</section>

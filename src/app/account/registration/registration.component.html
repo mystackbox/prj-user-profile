@@ -1,46 +1,98 @@
-<section class="page-content-container bg-light">
+<section class="page-content-container">
 <app-header></app-header>
 
     <div class="page-content-selection">
         <!-- Login form section-->
-        <form class="login-form">
-            <div class="form-sections-headings">
-                New profile
+        <form [formGroup]="registrationForm" class="login-form">
+            <div class="form-heading-section">
+                Register
             </div>
-            <div class="form-first-column">
-
                 <div class="form-group">
-                    <!-- #username allows angular to bind form-controls change status to ngModel -->
-                    <input type="text" formControlName="username"
-                        class="form-control form-control-sm form-control-textbox" placeholder="Your name">
+                    <input type="text" formControlName="firstName"
+                    class="form-control form-control-sm form-control-textbox"
+                    placeholder="First name">
+
+                    <!--
+                        Custom validation
+                        Multiple Validation Error messages  
+                    -->
+                    <div *ngIf="firstName?.touched && firstName?.invalid" class="form-validation-error-message">
+                        <div *ngIf="firstName?.errors?.['empty']">
+                            * First name required
+                        </div>
+                        <div *ngIf="firstName?.errors?.['whiteSpace']">
+                            * Name  cannot contain whitespace
+                        </div>
+                        <div *ngIf="firstName?.errors?.['specialCharacter']">
+                            * First name cannot contain special chatacter(s)
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <!-- #username allows angular to bind form-controls change status to ngModel -->
-                    <input type="text" formControlName="emailAddress" class="form-control form-control-sm form-control-textbox"
-                        placeholder="Email address">
+                    <input type="text" formControlName="emailAddress"   class="form-control form-control-sm form-control-textbox"                    placeholder="Email address">
+
+                    <!--Multiple Validation Error messages -->
+                    <div *ngIf="emailAddress?.touched && emailAddress?.invalid" class="form-validation-error-message">
+                        <div *ngIf="emailAddress?.errors?.['required']">* Email address
+                            required </div>
+                        <!-- <div *ngIf="emailAddress.errors?.['whiteSpace']">* Email address cannot contain whitespace</div> -->
+                        <div *ngIf="emailAddress?.errors?.['minlength']"> * Email should
+                            have a minimum of
+                            {{emailAddress?.errors?.['minlength'].requiredLength}}
+                            characters </div>
+                        <!-- <div *ngIf="firstName.errors?.['maxlength']"> First name should have a minimum of 5 characters </div> -->
+                        <div *ngIf="emailAddress?.errors?.['pattern']"> * Email address format is incorrect</div>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <!-- #password allows angular to binda the form-control to ngModel -->
                     <input type="password" formControlName="password" class="form-control form-control-sm"
-                        placeholder="Password">
+                    placeholder="Password">
+
+                    <!--Multiple Validation Error messages -->
+                    <div *ngIf="password?.touched && password?.invalid" class="form-validation-error-message">
+                        <div *ngIf="password?.errors?.['required']">* Password
+                            required </div>
+                            
+                        <div *ngIf="password?.errors?.['whiteSpace']">
+                            * Password cannot contain whitespace</div>
+                            
+                        <div *ngIf="password?.errors?.['minlength']"> * Password should
+                            have a minimum of
+                            {{password?.errors?.['minlength'].requiredLength}}
+                            characters </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <!-- #password allows angular to binda the form-control to ngModel -->
-                    <input type="password" formControlName="rePassword" class="form-control form-control-sm" placeholder="Re-password">
+                    <input type="password" formControlName="rePassword" class="form-control form-control-sm" 
+                    placeholder="Re-password">
+
+                    <!--Multiple Validation Error messages -->
+                    <div *ngIf="rePassword?.touched && rePassword?.invalid" class="form-validation-error-message">
+                        <div *ngIf="rePassword?.errors?.['required']">* Re-password
+                            required </div>
+                    
+                        <div *ngIf="rePassword?.errors?.['passwordMismatch']">
+                            * Passwords do not match</div>
+                    
+                        <div *ngIf="rePassword?.errors?.['minlength']"> * Re-password should
+                            have a minimum of
+                            {{rePassword?.errors?.['minlength'].requiredLength}}
+                            characters </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <!-- keeps the button inactive untill when the for is valid -->
-                    <input type="submit" value="Submit" class="btn btn-sm submit-button">
-                    <a class="nav-link form-nav-link" [routerLinkActive]="['active']"
-                        routerLink="/account/login">Sign in</a>
-                        <a class="nav-link form-nav-link" [routerLinkActive]="['active']" routerLink="/">Home</a>
-
+                    <input type="submit" value="Submit" class="btn btn-sm submit-button"> 
+                    <input type="reset" value="Clear" class="btn btn-sm form-clear-btn">
                 </div>
-            </div>
+
+                <div class="alternative-url-container">
+                    <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/account/login">Sign In</a> |
+                    <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/">Home</a>
+                </div>
         </form>
     </div>
 </section>

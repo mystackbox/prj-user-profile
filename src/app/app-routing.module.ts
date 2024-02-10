@@ -5,6 +5,7 @@ import { UserProfileComponent } from './account/user-profile/user-profile.compon
 import { HomeComponent } from './home/home/home.component';
 import { NotFoundComponent } from './not-found/not-found/not-found.component';
 import { LoginComponent } from './account/login/login.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 
 const routes: Routes = [
 { path: '', component: HomeComponent, title: "Home"  },
@@ -16,6 +17,7 @@ const routes: Routes = [
       { path: 'user-profile', component: UserProfileComponent, title: "User - Profile" }
     ]
   },
+  { path: 'dashboard', component: DashboardComponent, title: "User - Dasboard"  },
   // redirectTo - Error page
   { path: '**', component: NotFoundComponent, title: "Not found" },
 
