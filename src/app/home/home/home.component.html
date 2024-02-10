@@ -1,1 +1,22 @@
-<p>home works!</p>
+
+<section class="page-content-container bg-light">
+<app-header></app-header>
+    <div class="page-content-selection">
+        <!-- Login form section-->
+        <form>
+            <div class="form-sections-headings">
+                (Profile)
+            </div>
+            <div class="form-first-column">
+
+                <div class="form-group">
+                    <!-- keeps the button inactive untill when the for is valid -->
+                    <input type="submit" value="View profile"  (click)="redirectToUserProfile()" class="btn btn-sm submit-button">
+                    <input type="button" value="Sign In" (click)="redirectToSignin()" class="btn btn-sm form-nav-link">
+                    <input type="button" value="Register" (click)="redirectToRegistration()" class="btn btn-sm form-nav-link">
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

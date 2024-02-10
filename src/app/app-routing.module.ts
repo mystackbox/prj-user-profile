@@ -11,7 +11,7 @@ const routes: Routes = [
 { path: 'home', component: HomeComponent, title: "Home" },
   {
     path: 'account', children: [
-      { path: 'registration', component: RegistrationComponent, title: "User - Register" },
+      { path: 'registration', component: RegistrationComponent, title: "User - Registration" },
       { path: 'login', component: LoginComponent,  title: "User - Login" },
       { path: 'user-profile', component: UserProfileComponent, title: "User - Profile" }
     ]

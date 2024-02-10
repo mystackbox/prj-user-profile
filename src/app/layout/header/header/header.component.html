@@ -1,17 +1,4 @@
-<nav class="navbar bg-light navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">User Profile</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" [routerLinkActive]="['active']" [routerLinkActiveOptions]={exact:true}
-                                routerLink="/" aria-current="page">Home</a>
-                <a class="nav-link" [routerLinkActive]="['active']" routerLink="/account/registration">Register</a>
-                <a class="nav-link" [routerLinkActive]="['active']" routerLink="/account/login">Login (Guest)</a>
-            </div>
-        </div>
-    </div>
-</nav>
+<div class="page-content-selection">
+    <img class="img-fluid profile-image" (click)="redirectToUserProfile()" src="../assets/1.png">
+</div>
+

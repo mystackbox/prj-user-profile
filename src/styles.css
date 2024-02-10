@@ -1,9 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-html,
-body {
+html, body {
     height: 100%;
-    margin: 0px auto;
 }
 
 body {
@@ -12,30 +10,102 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
-    border: 1px solid lightgrey;   
+    margin: auto; 
+    max-width: 400px;
+    /* border: 1px solid lightgrey;      */
 }
 
-/* Forms */
+.page-content-container {
+    margin: 10px 0 15px 0;
+    padding: 15px 0px 15px 0px;
+    border-radius: 15px;
+}
 
-.form-control {
+/* page content sections */
+.page-content-selection {
+    text-align: center;
+    margin: 5px 0px 5px 0px;
+}
+
+/* Profile image */
+.profile-image {
+    max-height: 80px;
+    cursor: pointer;
+}
+
+form {
+    margin: 20px;
+    margin: auto;
+    max-width: 300px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid lightgrey;    
+ }
+
+.form-sections-headings {
+    color: lightgrey;
+    margin-bottom: 12px;
+}
+
+/* Form common styles*/
+form .form-control {
     margin-top: 7px;
     margin-bottom: 7px;
     color: grey;
 }
 
-.form-control::placeholder {
+form .form-control::placeholder {
     color: lightgrey;
+    opacity: 0.5;
 }
 
-.form-control.ng-touched.ng-invalid {
+form.form-control.ng-touched.ng-invalid {
     border-left: 14px solid #42A948;
     opacity: 1;
 }
 
 .form-control:focus {
     border: 1px solid blue;
+    color: lightgrey;
+}
+
+.form-control-icon {
+    float: right;
+    margin-right: 17px;
+    margin-top: -34px;
+    position: relative;
+    z-index: 2;
+    color: lightgrey;
+}
+
+form .submit-button {
+    background-color: slategrey;
+    width: 100%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+form .submit-button:hover {
+    background-color: red;
+    color: white;
+}
+
+form .form-nav-link {
+    font-size: 12px;
+    border: 1px solid lightgrey;
+    width: 100%;
+    padding: 4px 0px 4px 0px;
+    margin-top: 10px;
+    color: lightgrey;
+    border-radius: 3px;
+}
+
+form .form-nav-link:hover {
+    border: 1px solid red;
+    background-color: red;
+    color: white;
 }
 
 .form-validation-message {
@@ -43,15 +113,17 @@ body {
     font-size: 14px;
 }
 
-/* HyperLinks */
-.navbar-brand, .nav-link  {
-    color: grey;
+.form-error-messages {
+    padding: 5px;
+    padding-left: 8px;
+    margin-top: 4px;
+    border-radius: 5px;
+    color: red;
+    font-size: 12px;
+    border: 1px solid red;
 }
 
-.navbar-brand:hover {
-    color: orangered;
-}
 
-.nav-link:hover {
-    color: orangered;
-}
+
+
+

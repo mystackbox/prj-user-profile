@@ -1,1 +1,46 @@
-<p>registration works!</p>
+<section class="page-content-container bg-light">
+<app-header></app-header>
+
+    <div class="page-content-selection">
+        <!-- Login form section-->
+        <form class="login-form">
+            <div class="form-sections-headings">
+                New profile
+            </div>
+            <div class="form-first-column">
+
+                <div class="form-group">
+                    <!-- #username allows angular to bind form-controls change status to ngModel -->
+                    <input type="text" formControlName="username"
+                        class="form-control form-control-sm form-control-textbox" placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <!-- #username allows angular to bind form-controls change status to ngModel -->
+                    <input type="text" formControlName="emailAddress" class="form-control form-control-sm form-control-textbox"
+                        placeholder="Email address">
+                </div>
+
+                <div class="form-group">
+                    <!-- #password allows angular to binda the form-control to ngModel -->
+                    <input type="password" formControlName="password" class="form-control form-control-sm"
+                        placeholder="Password">
+                </div>
+
+                <div class="form-group">
+                    <!-- #password allows angular to binda the form-control to ngModel -->
+                    <input type="password" formControlName="rePassword" class="form-control form-control-sm" placeholder="Re-password">
+                </div>
+
+                <div class="form-group">
+                    <!-- keeps the button inactive untill when the for is valid -->
+                    <input type="submit" value="Submit" class="btn btn-sm submit-button">
+                    <a class="nav-link form-nav-link" [routerLinkActive]="['active']"
+                        routerLink="/account/login">Sign in</a>
+                        <a class="nav-link form-nav-link" [routerLinkActive]="['active']" routerLink="/">Home</a>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
