@@ -1,0 +1,20 @@
+<section class="page-content-container">
+
+    <div class="page-content-selection">
+        <app-header></app-header>
+        
+            <div class="form-heading-section">
+                Profile Details
+            </div>
+            <div *ngIf="loggedInUser.name">
+                ( {{loggedInUser.name}} )
+            </div>
+            <div>
+              {{loggedInUser.emailAddress}}
+            </div>
+            <div class="alternative-url-container">
+                <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/dashboard">Dashboard</a> |
+                <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/">Signout</a>
+            </div>
+    </div>
+</section>

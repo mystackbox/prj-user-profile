@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1001,
+      "name": "Yingisani",
+      "emailAddress": "yingi@skycode.co.za",
+      "password": "_123.@yingi"
+    },
+    {
+      "id": 1002,
+      "name": "Sibongiseni",
+      "emailAddress": "Sibongiseni@gmail.com",
+      "password": "_123.@sibo"
+    },
+    {
+      "id": 1003,
+      "name": "Reinette",
+      "emailAddress": "reinette@yahoo.com",
+      "password": "_123.@reinette"
+    },
+    {
+      "id": 1004,
+      "name": "Tebogo",
+      "emailAddress": "tebogo@skycode.co.za",
+      "password": "_123.@tebogo"
+    }
+  ],
+  
+  "loginAttemps": [
+    {
+      "userId": 1003,
+      "passedAttemps": 3
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.view-profile-btn {
+    background-color: orange;
+    padding: 5px 30px 5px 30px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.view-profile-btn:hover {
+    background-color: red;
+    color: white;
+}
+.page-content-container {
+    background-color: rgba(255, 255, 255, 0.0);
+}

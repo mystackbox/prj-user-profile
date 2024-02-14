@@ -1,0 +1,40 @@
+<section class="page-content-container">
+    <!-- <app-header></app-header> -->
+
+    <div class="page-content-selection ">
+        <app-header></app-header>
+   
+            <div class="form-heading-section">
+                Dashboard
+            </div>
+            <div *ngIf="_loggedInUser.name">
+                ( {{_loggedInUser.name}} )
+            </div>
+            <div>
+                {{_loggedInUser.emailAddress}}
+            </div>
+
+            <div class="charts-container">
+                <div class="pie-chart-container">
+                    <!-- <img class="img-fluid chart-imge" src="../assets/charts/1.png"> -->
+
+                    <div>
+                        <canvas id="canvas">{{_chart}}</canvas>
+                    </div>
+                    
+                    <p>Login attempts represented by  <b>[ Bar-chart ] </b> </p>
+                </div>
+
+                <div class="bar-chart-container">
+                    <img class="img-fluid chart-imge" src="../assets/charts/3.png">
+                    <p>Login attempts represented by <b>[ Pie-chart ] </b></p>
+                </div>
+            </div>
+
+            <div class="alternative-url-container">
+                <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/account/user-profile">Profile</a> |
+                <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/">Signout</a>
+            </div>
+      
+    </div>
+</section>
