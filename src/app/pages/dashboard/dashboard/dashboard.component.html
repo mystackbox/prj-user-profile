@@ -7,29 +7,44 @@
             <div class="form-heading-section">
                 Dashboard
             </div>
-            <div *ngIf="_loggedInUser.name">
+            <div>
                 ( {{_loggedInUser.name}} )
             </div>
             <div>
                 {{_loggedInUser.emailAddress}}
             </div>
 
-            <div class="charts-container">
-                <div class="pie-chart-container">
-                    <!-- <img class="img-fluid chart-imge" src="../assets/charts/1.png"> -->
-
-                    <div>
-                        <canvas id="canvas">{{_chart}}</canvas>
-                    </div>
-                    
-                    <p>Login attempts represented by  <b>[ Bar-chart ] </b> </p>
-                </div>
-
-                <div class="bar-chart-container">
-                    <img class="img-fluid chart-imge" src="../assets/charts/3.png">
-                    <p>Login attempts represented by <b>[ Pie-chart ] </b></p>
+            <div *ngIf="_errorMessage ; else displaCharts" class="form-main-validation-error-message error-message-container">
+                <div>
+                    {{_errorMessage}}
                 </div>
             </div>
+
+            <ng-template #displaCharts>
+                <div class="chart-container">
+                    <div class="pie-chart-container">
+                        <div>
+                            <canvas id="barGraph">{{_barGraph}}</canvas>
+                        </div>
+                
+                    </div>
+                    <p>Login attempts in <b>[ Bar-Graph ] </b> </p>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="pie-chart-container">
+                        <div>
+                            <canvas id="pieChart">{{_pieChart}}</canvas>
+                        </div>
+                
+                    </div>
+                    <p>Login attempts in <b>[Pie-Chart ] </b> </p>
+                </div>
+
+            </ng-template>
+
+
+         
 
             <div class="alternative-url-container">
                 <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/account/user-profile">Profile</a> |

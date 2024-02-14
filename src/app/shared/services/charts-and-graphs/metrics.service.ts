@@ -11,7 +11,7 @@ export class MetricsService {
   constructor(private http: HttpClient) { }
 
   private getUserLoginStats(userId: number) {
-      return this.http.get<ILoginAttempt>(environment.apiUrl + "/loginAttemps/userId="+ userId); 
+      return this.http.get<ILoginAttempt>(environment.apiUrl + "/loginAttemps?userId="+ userId); 
   }
 
   public userLoginStats(userId: number) {

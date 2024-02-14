@@ -9,7 +9,7 @@ export interface ILoginAttempt {
         friday?: number,
         saturday?: number
     },
-    failedAttemps: {
+    failedAttempts: {
         sunday?: number,
         monday?:number,
         tuesday?: number,

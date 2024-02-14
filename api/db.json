@@ -23,13 +23,98 @@
       "name": "Tebogo",
       "emailAddress": "tebogo@skycode.co.za",
       "password": "_123.@tebogo"
+    },
+    {
+      "id": "ad94",
+      "name": "Jame",
+      "emailAddress": "jbanda@mtn.co.za",
+      "password": "somepassword"
     }
   ],
-  
   "loginAttemps": [
     {
       "userId": 1003,
-      "passedAttemps": 3
+      "passedAttemps": {
+        "sunday": 3,
+        "monday": 2,
+        "tuesday": 5,
+        "wednesday": 1,
+        "thursday": 4,
+        "friday": 2,
+        "saturday": 3
+      },
+      "failedAttemps": {
+        "sunday": 2,
+        "monday": 3,
+        "tuesday": 3,
+        "wednesday": 2,
+        "thursday": 1,
+        "friday": 4,
+        "saturday": 1
+      }
+    },
+    {
+      "userId": 1001,
+      "passedAttemps": {
+        "sunday": 1,
+        "monday": 4,
+        "tuesday": 2,
+        "wednesday": 2,
+        "thursday": 1,
+        "friday": 3,
+        "saturday": 1
+      },
+      "failedAttemps": {
+        "sunday": 4,
+        "monday": 2,
+        "tuesday": 4,
+        "wednesday": 1,
+        "thursday": 1,
+        "friday": 3,
+        "saturday": 3
+      }
+    },
+    {
+      "userId": 1004,
+      "passedAttemps": {
+        "sunday": 2,
+        "monday": 1,
+        "tuesday": 1,
+        "wednesday": 1,
+        "thursday": 3,
+        "friday": 2,
+        "saturday": 2
+      },
+      "failedAttemps": {
+        "sunday": 1,
+        "monday": 1,
+        "tuesday": 2,
+        "wednesday": 2,
+        "thursday": 3,
+        "friday": 1,
+        "saturday": 1
+      }
+    },
+    {
+      "userId": 1003,
+      "passedAttemps": {
+        "sunday": 1,
+        "monday": 4,
+        "tuesday": 2,
+        "wednesday": 2,
+        "thursday": 1,
+        "friday": 3,
+        "saturday": 3
+      },
+      "failedAttemps": {
+        "sunday": 4,
+        "monday": 2,
+        "tuesday": 4,
+        "wednesday": 1,
+        "thursday": 1,
+        "friday": 3,
+        "saturday": 3
+      }
     }
   ]
 }

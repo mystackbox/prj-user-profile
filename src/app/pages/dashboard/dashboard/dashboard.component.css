@@ -1,3 +1,8 @@
-.chart-imge {
-    height: 140px;
+.pie-chart-container {
+        margin: 100px 20px 60px 20px;
+        margin: auto;
+        max-width: 600px;
+        padding: 25px;
+        border-radius: 10px;
+        background-color: rgba(248, 249, 250, 0.9);
 }

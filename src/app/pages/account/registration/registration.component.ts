@@ -14,7 +14,7 @@ import { emailAsyncValidator, passwordCMatchValidator, strValidator, whitespaceS
 })
 export class RegistrationComponent  implements OnInit {
 
-  //variables declaration
+  //local variables declaration
   _registrationForm!: FormGroup;
   _userDetails!: IUser;
   _registeredUser!: IUser; 
@@ -99,8 +99,8 @@ export class RegistrationComponent  implements OnInit {
       return this._registeredUser;
     }),
       
-    catchError(error => {
-        throw error;
+    catchError(_error => {
+        throw _error;
     })
     ).subscribe({
       next: (_registeredUser: IUser) => {
@@ -115,7 +115,6 @@ export class RegistrationComponent  implements OnInit {
         }
       }
     });  
-    
   }
 
   //Map http post parameters[IUser]
