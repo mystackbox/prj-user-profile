@@ -83,32 +83,34 @@ export class RegistrationComponent  implements OnInit {
     //Map form values as per required http post parameter(IUser)
     this._userDetails = this.setUserDetails(formData);
 
-    this._userServie.registerUser(this._userDetails).pipe(map((_httpResponse: any) => {
+    this._userServie.registerUser(this._userDetails).pipe(map((_response: any) => {
       
-      if (!_httpResponse) {
+      if (!_response) {
 
         throw "Something went wrong in the server";
         // throwError;
-      } else if (Object.keys(_httpResponse).length === 0) {
+      } else if (Object.keys(_response).length === 0) {
 
         this._registrationForm.reset();
         throw "Registration unssuccessfull!";
          // throwError;
 
       } else {
+
         //returns an object  
-        this._registeredUser = _httpResponse;
-        this.resetForm();
+        this._registeredUser = _response;
+
       }
       return this._registeredUser;
     }), 
       
     catchError(_error => {
       //http server errors 
-        throw _error;
-    })
-    ).subscribe({
+      throw _error;
+      
+    })).subscribe({
       next: (_registeredUser: IUser) => {
+
         //store user object before navigating to dashboard
         this._authStorage.storeUser(_registeredUser);
         this._router.navigate(['/dashboard']);

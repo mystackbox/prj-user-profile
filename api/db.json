@@ -47,6 +47,24 @@
       "name": "Tested",
       "emailAddress": "tested@testing.co.za",
       "password": "tested@testing.co.za"
+    },
+    {
+      "id": "2aed",
+      "name": "reg",
+      "emailAddress": "reg@reg.co.za",
+      "password": "reg@reg.co.za"
+    },
+    {
+      "id": "edc3",
+      "name": "again",
+      "emailAddress": "again@gmail.com",
+      "password": "again@gmail.com"
+    },
+    {
+      "id": "d68c",
+      "name": "working",
+      "emailAddress": "working@gmao.com",
+      "password": "working@gmao.com"
     }
   ],
   "loginAttemps": [

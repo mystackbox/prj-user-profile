@@ -1,1 +1,57 @@
-<p>not-found works!</p>
+<section class="page-content-container">
+
+    <div *ngIf="_loggedInUserStatus; else guestContent" class="page-content-selection ">
+        <app-header></app-header>
+
+        <div class="form-heading-section">
+            Not found!
+        </div>
+        <div>
+            ( {{_loggedInUser.name}} )
+        </div>
+        <div>
+            {{_loggedInUser.emailAddress}}
+        </div>
+
+        <div  class="form-main-validation-error-message error-message-container">
+
+            <div>
+                Sorry, the rource you are looking was not found.
+            </div>
+            <div>
+                Please contact the administrator for more assistance.
+            </div>
+
+        </div>
+
+        <div class="alternative-url-container">
+            <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/account/user-profile">Profile</a> |
+            <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/">Signout</a>
+        </div>
+    </div>
+    
+    <ng-template #guestContent>
+        <div class="page-content-selection ">
+            <app-header></app-header>
+            <div class="form-heading-section">
+                Not found!
+            </div>
+            <div>
+                ( Guest )
+            </div>
+            <div class="form-main-validation-error-message error-message-container">
+                <div>
+                    Sorry, the rource you are looking was not found.
+                </div>
+                <div>
+                    Please contact the administrator for more assistance.
+                </div>
+            </div>
+
+            <div class="alternative-url-container">
+                <a class="alternative-url" [routerLinkActive]="['active']" routerLink="/">Home</a>
+            </div>
+        </div>
+    </ng-template>
+
+</section>

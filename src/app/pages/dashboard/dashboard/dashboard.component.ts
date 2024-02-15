@@ -35,12 +35,9 @@ export class DashboardComponent {
   ngOnInit(): void { 
 
      //Chech if  the user is already loggedIn
-     if (Object.keys(this._authStorage.getUser()).length !== 0) {
-       this._loggedInUser = this._authStorage.getUser(); 
-
-       console.log(" -- What dashboard [Inint] user are we getting --- ");
-       console.log(this._loggedInUser);
+    if (Object.keys(this._authStorage.getUser()).length !== 0) {
        
+       this._loggedInUser = this._authStorage.getUser(); 
        this._userId = this._loggedInUser.id;
 
        //get login attempts for the userId
@@ -49,7 +46,7 @@ export class DashboardComponent {
   }
 
   //retrieve login attempts data for the loggedIn user with userId = id
-  public getUserLoginStats(id: number): ILoginAttempt {
+  public getUserLoginStats(id: number): any {
 
     let userAttemptsData: any;  
     this._metricsService.userLoginStats(id).pipe(map((_response: ILoginAttempt) => {
@@ -57,39 +54,42 @@ export class DashboardComponent {
       if (!_response) {
 
         throw "Something went wrong in the server";
-
+         // throwError;
       } else if (Object.keys(_response).length === 0) {
 
         throw "Sorry, you do not have login attempts data available."; 
-        
+         // throwError;
       } else {
-
+        //returns an array of object 
         this._userAttemptsData = _response;
       } 
         return this._userAttemptsData;
     }),
       
-    catchError(error => {
+      catchError(error => {
+       //http server errors 
         throw error;
-    })
-    
-    ).subscribe({
+
+    })).subscribe({
       next: (_response: any) => {
 
+        //pass the required data for display graphs
         this.displayBarGraph(_response);
         this.displayPieChart(_response);
 
       },
       error: (_error: any) => {
-        if (_error) {
-           if (_error) {
+
+        //Unsuccessful server registration error message
+         if (_error.status == 404) {
+          this._errorMessage = "Registration unsuccessful!";
+
+        } else {
+          //Unsuccessful local error message
           this._errorMessage = _error;
-        }
         }
       }
     });
-    
-    return this._userAttemptsData;
       
   }
   
@@ -98,7 +98,7 @@ export class DashboardComponent {
     
     if (Object.keys(this._userAttemptsData).length !== 0) {
 
-        let _data = _response[0];
+        let _data = _response;
       
         this._barGraph = new Chart('barGraph', {
         type: 'bar',
@@ -151,7 +151,7 @@ export class DashboardComponent {
   displayPieChart(_response: any): void {
 
     if (Object.keys(this._userAttemptsData).length !== 0) {
-      let _data = _response[0];
+      let _data = _response;
 
         this._pieChart = new Chart('pieChart', {
         type: 'pie',
@@ -195,7 +195,7 @@ export class DashboardComponent {
           },
         },
       });
-      } 
+    } 
   }
 
 }

@@ -61,7 +61,13 @@ ng serve
 Once the project is running, navigate to `http://localhost:4200/` or copy the hyperlink and paste in your browser address bar, then run. 
 
 #### 4. API Reference
-This application uses `json-server` Mock API to mimick the RESTful services. Please read [ json-server documentation](https://github.com/typicode/json-server) mock API for more details.
+This application uses `json-server` Mock API to mimic real JSON RESTful services. To run json-server for this application, you need to run the following command:
+
+```javascript
+npm run api
+``` 
+
+Please read [ json-server documentation](https://github.com/typicode/json-server) mock API for more details.
 
 #### 5. Run the Units Test
 To run the units test [Karma](https://karma-runner.github.io), please execute the commend in your angular CLI as indicated below:

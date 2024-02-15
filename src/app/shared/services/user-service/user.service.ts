@@ -32,7 +32,7 @@ export class UserService {
   }
 
   private login(_emailAddress: string, _password: string) {
-  return this.http.get<any>(environment.apiUrl + "/users?emailAddress="+ _emailAddress + "&" + _password );
+  return this.http.get<IUser>(environment.apiUrl + "/users?emailAddress="+ _emailAddress + "&" + _password );
   }
   
   private register(_userDetails: IUser) {

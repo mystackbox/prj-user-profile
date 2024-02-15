@@ -49,7 +49,7 @@ export class LoginComponent  implements OnInit{
   }
   
   //login - based on username and password
-  public login(): any {
+  public login(): any{
 
     //declaration - local variables
     const _loginFormData = this._loginForm.value;
@@ -75,7 +75,8 @@ export class LoginComponent  implements OnInit{
          throw "Login failed, incorrect login details"; 
             // throwError;
           
-        } else {
+       } else {
+         
           //returns an array of object
           this._loggedInUser = _response[0];
        }
@@ -106,10 +107,11 @@ export class LoginComponent  implements OnInit{
           this._errorMessage = _error;
         }
       }
-   });
+    });
+
   }
 
-  //Clear the login form
+  //Clear the login form and error message
   resetForm() {
     this._loginForm.reset();
     this._errorMessage = '';
