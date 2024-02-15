@@ -29,6 +29,24 @@
       "name": "Jame",
       "emailAddress": "jbanda@mtn.co.za",
       "password": "somepassword"
+    },
+    {
+      "id": "af09",
+      "name": "Test",
+      "emailAddress": "test@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": "2e19",
+      "name": "Tester",
+      "emailAddress": "tester@test.co.za",
+      "password": "tester@test.co.za"
+    },
+    {
+      "id": "7b5b",
+      "name": "Tested",
+      "emailAddress": "tested@testing.co.za",
+      "password": "tested@testing.co.za"
     }
   ],
   "loginAttemps": [
@@ -96,7 +114,7 @@
       }
     },
     {
-      "userId": 1003,
+      "userId": 1002,
       "passedAttemps": {
         "sunday": 1,
         "monday": 4,

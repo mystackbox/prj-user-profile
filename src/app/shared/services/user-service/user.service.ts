@@ -11,21 +11,32 @@ export class UserService {
   constructor(private http: HttpClient) {
   }
 
-  //http requests - observables
+  //http requests - get all users
+  public getUsers() {
+    return this.users();
+  }
+  
+  //http requests - post user object [_userDetails]
   public registerUser(_userDetails: IUser) {
     return this.register(_userDetails);
   }
-  public getUsers() {
-    return this.users;
+
+   //http requests - get user matching [emailAddress, password]
+  public loginUser(_emailAddress: string, _password: string) {
+    return this.login(_emailAddress, _password);
   }
 
   //private - http requests
-  private get users() {
-  return this.http.get<IUser[]>(environment.apiUrl + "/users");
+  private users() {
+    return this.http.get<IUser[]>(environment.apiUrl + "/users");
+  }
+
+  private login(_emailAddress: string, _password: string) {
+  return this.http.get<any>(environment.apiUrl + "/users?emailAddress="+ _emailAddress + "&" + _password );
   }
   
   private register(_userDetails: IUser) {
-    return this.http.post<any>(environment.apiUrl + "/users", JSON.stringify(_userDetails));
+    return this.http.post<IUser>(environment.apiUrl + "/users", JSON.stringify(_userDetails));
   }
 
 }

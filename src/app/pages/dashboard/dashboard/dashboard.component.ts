@@ -37,6 +37,10 @@ export class DashboardComponent {
      //Chech if  the user is already loggedIn
      if (Object.keys(this._authStorage.getUser()).length !== 0) {
        this._loggedInUser = this._authStorage.getUser(); 
+
+       console.log(" -- What dashboard [Inint] user are we getting --- ");
+       console.log(this._loggedInUser);
+       
        this._userId = this._loggedInUser.id;
 
        //get login attempts for the userId
@@ -51,12 +55,15 @@ export class DashboardComponent {
     this._metricsService.userLoginStats(id).pipe(map((_response: ILoginAttempt) => {
       
       if (!_response) {
+
         throw "Something went wrong in the server";
 
       } else if (Object.keys(_response).length === 0) {
+
         throw "Sorry, you do not have login attempts data available."; 
         
       } else {
+
         this._userAttemptsData = _response;
       } 
         return this._userAttemptsData;
@@ -68,8 +75,10 @@ export class DashboardComponent {
     
     ).subscribe({
       next: (_response: any) => {
+
         this.displayBarGraph(_response);
         this.displayPieChart(_response);
+
       },
       error: (_error: any) => {
         if (_error) {

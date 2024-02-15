@@ -62,8 +62,8 @@ export function emailAsyncValidator(_userService: UserService): AsyncValidatorFn
     return (control: AbstractControl) => {
 
         return _userService.getUsers().pipe(map( _users => {
-            const _user = _users.find((user: any) => user.emailAddress.toLowerCase() === control.value.toLowerCase());
-            return _user ? { emailExist: true } : null;                
+            const _matchingUser = _users.find((user: any) => user.emailAddress.toLowerCase() === control.value.toLowerCase());
+            return _matchingUser ? { emailExist: true } : null;                
             }
         ))
     }
