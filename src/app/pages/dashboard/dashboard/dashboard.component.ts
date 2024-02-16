@@ -98,7 +98,7 @@ export class DashboardComponent {
     
     if (Object.keys(this._userAttemptsData).length !== 0) {
 
-        let _data = _response;
+        let _data = _response[0];
       
         this._barGraph = new Chart('barGraph', {
         type: 'bar',
@@ -151,7 +151,7 @@ export class DashboardComponent {
   displayPieChart(_response: any): void {
 
     if (Object.keys(this._userAttemptsData).length !== 0) {
-      let _data = _response;
+      let _data = _response[0];
 
         this._pieChart = new Chart('pieChart', {
         type: 'pie',
