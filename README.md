@@ -3,7 +3,7 @@
 Managing online user profiles. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
 
 ![alt text](github-doc-img.png)
-> **Angular 2+** -  The most powerful javascript framework widely used for process real-time data. 
+> **Angular 2+** -  The most powerful javascript framework widely used for processing real-time data. 
 
 ## Table of contents
 
