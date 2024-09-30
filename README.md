@@ -8,7 +8,7 @@ Managing online user profiles. This project was generated with [Angular CLI](htt
 ## Table of contents
 
 - [Description](#description)
-- [How to use](#how-to-use)
+- [How to run](#how-to-run)
 - [References](#references)
 - [Licence](#licence)
 - [Author Information](#author-information)
@@ -34,7 +34,7 @@ User Profile is single-page application developed with `Angular 2+` framework. T
 - Postman - for testing http methods.
 - Karma and Jasmine.
 
-## How to use
+## How to run
 
 #### 1. Installation
 You need the following tools installed on your computer before attempting to run the cloned project:
