@@ -1,67 +1,68 @@
 # User Profile
 
-Managing online user profiles. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
-
 ![alt text](github-doc-img.png)
-> **Angular 2+** -  The most powerful javascript framework widely used for processing real-time data. 
 
-## Table of contents
-
-- [Description](#description)
-- [How to run](#how-to-run)
+# Table of contents
+- [Introduction](#introduction)
+- [Environment](#environment)
+- [Tech Stack](#tech-stack)
+- [How to run the application](#how-to-run-the-application)
 - [References](#references)
 - [Licence](#licence)
-- [Author Information](#author-information)
 
 
-## Description
+# Introduction
 
-User Profile is single-page application developed with `Angular 2+` framework. The application allows anonymous user to create profile (`registrastion`), and login into the system (`authentication`) to view their login attempts (failed and passed) metrics. 
+User Profile is single-page application developed with `Angular 2+` framework, taht allows anonymous user to create profile (`registrastion`), and login into the system (`authentication`), and view their login attempts (failed and passed) metrics. 
 
-[Back to the top](#user-profile)
+[Back to the top](#table-of-contents)
 
-## Tools and Technologies
-
-[Back to the top](#user-profile)
-
-#### Responsive Wed Design
-- Responsive Web Design (HTML 5, CSS 3, Bootstrap 5).
-- Angular CLI - ver 16.1.8
-- Visual Studio Code.
-- Angular/Typescrit framawork ver - 16.2.12
-- Node.js - ver 18.13.0
+# Environment
+- Operating System - Windows 11
+- Angular CLI - v16.1.8
+- Visual Studio Code
+- Node.js - v20.11.1
 - Json server (Mock API) - ver 1.0.0-alpha.23
-- Postman - for testing http methods.
-- Karma and Jasmine.
+- Postman - testing the http methods.
 
-## How to run
+[Back to the top](#table-of-contents)
 
-#### 1. Installation
-You need the following tools installed on your computer before attempting to run the cloned project:
+# Tech stack
+- Responsive Web Design (HTML5, CSS 3, Bootstrap 5, FontAwesome).
+- Angular CLI - v16.1.8
+- Visual Studio Code.
+- Angular/Typescrit framawork v16.2.12
+- Node.js - ver 18.13.0
+
+[Back to the top](#table-of-contents)
+
+# How to run the application
+
+### 1. Installation
+Ensure that you have following items are installed in your computer:
 
 - Visual Studio Code
 - Node.js
-- NPM (Node Package Manager)
 - Angular CLI
 
-#### 2. Clone `GitHub` project repository
+### 2. Clone `GitHub` repository
 
-The GitHub repository for this project can be accessed by clicking here: [ [User Profile](https://github.com/my-recent-projects/Prj-User-Admin) ]. For more information on how to clone the GitHub repository, see ["Cloning GitHub repository"](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+Clone the project from Github repository into your local repository: [ [User Profile](https://github.com/my-recent-projects/Prj-User-Admin) ]. For more information on how to clone the GitHub repository, see ["Cloning GitHub repository"](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
-#### 3. Run Project
+### 3. Start the localhost server
 
-Before running the project, copy the command below, pasted it in your angular CLI, the hit `Enter` button. This step will install all the packages required before running the project.
+Run the following command in your `CLI` to install all the rrequired packages:
 ```javascript
 npm install
 ```
-To run the project, copy the command below, pasted it in your angular CLI, the hit **Enter** button. This step will install all the packages required before running the project.
+Run the following command in your `CLI` to start the `localhost` server.
 ```javascript
 ng serve
 ``` 
-Once the project is running, navigate to `http://localhost:4200/` or copy the hyperlink and paste in your browser address bar, then run. 
+Once the `localhost` server is running, navigate to `http://localhost:4200/` or copy/paste `http://localhost:4200/` in your browser address-bar, then press enter.  
 
-#### 4. API Reference
-This application uses `json-server` Mock API to mimic real JSON RESTful services. To run json-server for this application, you need to run the following command:
+### 4. Start the Mock API server
+This application uses `json-server` Mock API to mimic real JSON RESTful services. To start json-server, run the following command:
 
 ```javascript
 npm run api
@@ -69,13 +70,7 @@ npm run api
 
 Please read [ json-server documentation](https://github.com/typicode/json-server) mock API for more details.
 
-#### 5. Run the Units Test
-To run the units test [Karma](https://karma-runner.github.io), please execute the commend in your angular CLI as indicated below:
-```javascript
-ng test
-``` 
-
-[Back to the top](#user-profile)
+[Back to the top](#table-of-contents)
 
 ## References
 
@@ -84,9 +79,7 @@ ng test
 - For more information related to Node.js, please check out the [Introduction to Node.js](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) page.
 - For more information related to Node Package Manager (NPM), please check out the [npm Docs](https://docs.npmjs.com/) page.
 
-
-
-[Back to the top](#user-profile)
+[Back to the top](#table-of-contents)
 
 ## Licence
 
