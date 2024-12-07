@@ -22,8 +22,7 @@ User Profile is single-page application developed with `Angular 2+` framework, t
 - Angular CLI - v16.1.8
 - Node.js - v18.13.0
 - Visual Studio Code
-- Postman - testing the http methods.
-- 
+- Postman - testing the http methods. 
 
 [Back to the top](#table-of-contents)
 
