@@ -20,19 +20,20 @@ User Profile is single-page application developed with `Angular 2+` framework, t
 # Environment
 - Operating System - Windows 11
 - Angular CLI - v16.1.8
+- Node.js - v18.13.0
 - Visual Studio Code
-- Node.js - v20.11.1
-- Json server (Mock API) - ver 1.0.0-alpha.23
 - Postman - testing the http methods.
+- 
 
 [Back to the top](#table-of-contents)
 
 # Tech stack
 - Responsive Web Design (HTML5, CSS 3, Bootstrap 5, FontAwesome).
-- Angular CLI - v16.1.8
-- Visual Studio Code.
-- Angular/Typescrit framawork v16.2.12
-- Node.js - ver 18.13.0
+- Angular/Typescript framework v16.2.12
+- RxJs
+- Charts.js
+- Json server (Mock API) - ver 1.0.0-alpha.23
+
 
 [Back to the top](#table-of-contents)
 
